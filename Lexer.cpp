@@ -78,13 +78,18 @@ void Lexer::run(string inputString) {
   resultTokens.push_back(eofTok);
 }
 
-void Lexer::toString() {
-
+string Lexer::toString() {
+  string strToReturn = "";
+  cout << endl;
   for (int i = 0; i < resultTokens.size(); i++) {
 
     cout << resultTokens.at(i)->toString() << endl;
+    strToReturn += resultTokens.at(i)->toString() + "\n";
 
   }
-  cout << "Total Tokens = " << resultTokens.size();
+  cout << "Total Tokens = " << resultTokens.size() << endl << endl;
+  strToReturn += "Total Tokens: " + to_string(resultTokens.size());
+
+  return strToReturn;
 
 }

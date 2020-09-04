@@ -1,0 +1,20 @@
+
+G:\Users\Garrett Charles\Documents\2020_Fall_BYU\CS236\CS236-Project1\Automaton.h:1:9: warning: #pragma once in main file
+#pragma once
+^~
+G:\Users\Garrett Charles\Documents\2020_Fall_BYU\CS236\CS236-Project1\CommentAutomaton.cpp:1:9: warning: #pragma once in main file
+#pragma once
+^~
+G:\Users\Garrett Charles\Documents\2020_Fall_BYU\CS236\CS236-Project1\CommentAutomaton.h:1:9: warning: #pragma once in main file
+#pragma once
+^~
+G:\Users\Garrett Charles\Documents\2020_Fall_BYU\CS236\CS236-Project1\IDAutomaton.cpp:1:9: warning: #pragma once in main file
+#pragma once
+^~
+G:\Users\Garrett Charles\Documents\2020_Fall_BYU\CS236\CS236-Project1\IDAutomaton.h:1:9: warning: #pragma once in main file
+#pragma once
+^~
+G:\Users\Garrett Charles\Documents\2020_Fall_BYU\CS236\CS236-Project1\Lexer.h:1: fatal error: can't create precompiled header G:\Users\Garrett Charles\Documents\2020_Fall_BYU\CS236\CS236-Project1\IDAutomaton.exe: Permission denied
+#pragma once
+
+compilation terminated.

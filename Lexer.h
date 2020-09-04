@@ -16,5 +16,5 @@ class Lexer {
   public:
     Lexer();
     void run(string inputString);
-    void toString();
+    string toString();
 };
