@@ -1,0 +1,74 @@
+
+G:\Users\Garrett Charles\Documents\2020_Fall_BYU\CS236\CS236-Project1\Automaton.h:1:9: warning: #pragma once in main file
+#pragma once
+^~
+G:\Users\Garrett Charles\Documents\2020_Fall_BYU\CS236\CS236-Project1\Lexer.cpp: In constructor 'Lexer::Lexer()':
+G:\Users\Garrett Charles\Documents\2020_Fall_BYU\CS236\CS236-Project1\Lexer.cpp:18:58: error: invalid new-expression of abstract class type 'StringAutomaton'
+new StringAutomaton(TokenType::STRING)};
+^
+In file included from G:\Users\Garrett Charles\Documents\2020_Fall_BYU\CS236\CS236-Project1\Lexer.h:3,
+from G:\Users\Garrett Charles\Documents\2020_Fall_BYU\CS236\CS236-Project1\Lexer.cpp:1:
+G:\Users\Garrett Charles\Documents\2020_Fall_BYU\CS236\CS236-Project1\StringAutomaton.h:5:7: note: because the following virtual functions are pure within 'StringAutomaton':
+class StringAutomaton : public Automaton {
+^~~
+In file included from G:\Users\Garrett Charles\Documents\2020_Fall_BYU\CS236\CS236-Project1\MatcherAutomaton.h:2,
+from G:\Users\Garrett Charles\Documents\2020_Fall_BYU\CS236\CS236-Project1\Lexer.h:2,
+from G:\Users\Garrett Charles\Documents\2020_Fall_BYU\CS236\CS236-Project1\Lexer.cpp:1:
+G:\Users\Garrett Charles\Documents\2020_Fall_BYU\CS236\CS236-Project1\Automaton.h:20:17: note: 'virtual int Automaton::read(const string&)'
+virtual int read(const string& input) = 0;
+^~
+G:\Users\Garrett Charles\Documents\2020_Fall_BYU\CS236\CS236-Project1\Lexer.cpp:18:59: error: no match for 'operator=' (operand types are 'std::vector<Automaton>' and '')
+new StringAutomaton(TokenType::STRING)};
+^
+In file included from c:\mingw\lib\gcc\mingw32\8.2.0\include\c++\vector:69,
+from G:\Users\Garrett Charles\Documents\2020_Fall_BYU\CS236\CS236-Project1\Lexer.h:4,
+from G:\Users\Garrett Charles\Documents\2020_Fall_BYU\CS236\CS236-Project1\Lexer.cpp:1:
+c:\mingw\lib\gcc\mingw32\8.2.0\include\c++\bits\vector.tcc:186:5: note: candidate: 'std::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(const std::vector<_Tp, _Alloc>&) [with _Tp = Automaton; _Alloc = std::allocator<Automaton>]'
+vector<_Tp, _Alloc>::
+^~~~~~~
+c:\mingw\lib\gcc\mingw32\8.2.0\include\c++\bits\vector.tcc:186:5: note: no known conversion for argument 1 from '' to 'const std::vector<Automaton>&'
+In file included from c:\mingw\lib\gcc\mingw32\8.2.0\include\c++\vector:64,
+from G:\Users\Garrett Charles\Documents\2020_Fall_BYU\CS236\CS236-Project1\Lexer.h:4,
+from G:\Users\Garrett Charles\Documents\2020_Fall_BYU\CS236\CS236-Project1\Lexer.cpp:1:
+c:\mingw\lib\gcc\mingw32\8.2.0\include\c++\bits\stl_vector.h:596:7: note: candidate: 'std::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(std::vector<_Tp, _Alloc>&&) [with _Tp = Automaton; _Alloc = std::allocator<Automaton>]'
+operator=(vector&& x) noexcept(_Alloc_traits::_S_nothrow_move())
+^~~~
+c:\mingw\lib\gcc\mingw32\8.2.0\include\c++\bits\stl_vector.h:596:7: note: no known conversion for argument 1 from '' to 'std::vector<Automaton>&&'
+c:\mingw\lib\gcc\mingw32\8.2.0\include\c++\bits\stl_vector.h:617:7: note: candidate: 'std::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(std::initializer_list<_Tp>) [with _Tp = Automaton; _Alloc = std::allocator<Automaton*>]'
+operator=(initializer_list<value_type> l)
+^~
+c:\mingw\lib\gcc\mingw32\8.2.0\include\c++\bits\stl_vector.h:617:7: note: no known conversion for argument 1 from '' to 'std::initializer_list<Automaton*>'
+G:\Users\Garrett Charles\Documents\2020_Fall_BYU\CS236\CS236-Project1\Lexer.h:1:9: warning: #pragma once in main file
+#pragma once
+^~
+G:\Users\Garrett Charles\Documents\2020_Fall_BYU\CS236\CS236-Project1\MatcherAutomaton.cpp:1:9: warning: #pragma once in main file
+#pragma once
+^~
+G:\Users\Garrett Charles\Documents\2020_Fall_BYU\CS236\CS236-Project1\MatcherAutomaton.h:1:9: warning: #pragma once in main file
+#pragma once
+^~
+G:\Users\Garrett Charles\Documents\2020_Fall_BYU\CS236\CS236-Project1\StringAutomaton.cpp:1:9: warning: #pragma once in main file
+#pragma once
+^~
+G:\Users\Garrett Charles\Documents\2020_Fall_BYU\CS236\CS236-Project1\StringAutomaton.cpp: In member function 'int StringAutomaton::read(std::__cxx11::string)':
+G:\Users\Garrett Charles\Documents\2020_Fall_BYU\CS236\CS236-Project1\StringAutomaton.cpp:12:19: error: ISO C++ forbids comparison between pointer and integer [-fpermissive]
+if (input[0] == "\'") {
+^~
+G:\Users\Garrett Charles\Documents\2020_Fall_BYU\CS236\CS236-Project1\StringAutomaton.cpp:21:23: error: ISO C++ forbids comparison between pointer and integer [-fpermissive]
+if (input[i] == "\'") {
+^~
+G:\Users\Garrett Charles\Documents\2020_Fall_BYU\CS236\CS236-Project1\StringAutomaton.cpp:22:61: error: ISO C++ forbids comparison between pointer and integer [-fpermissive]
+if ((i < (input.size() - 1)) and (input[(i + 1)] == "\'")) {
+^~
+G:\Users\Garrett Charles\Documents\2020_Fall_BYU\CS236\CS236-Project1\StringAutomaton.h:1:9: warning: #pragma once in main file
+#pragma once
+^~
+G:\Users\Garrett Charles\Documents\2020_Fall_BYU\CS236\CS236-Project1\Token.cpp:1:9: warning: #pragma once in main file
+#pragma once
+^~
+G:\Users\Garrett Charles\Documents\2020_Fall_BYU\CS236\CS236-Project1\Token.h:1:9: warning: #pragma once in main file
+#pragma once
+^~
+G:\Users\Garrett Charles\Documents\2020_Fall_BYU\CS236\CS236-Project1\TokenType.h:1:9: warning: #pragma once in main file
+#pragma once
+^~
