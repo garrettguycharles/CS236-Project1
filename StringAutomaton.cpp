@@ -21,6 +21,8 @@ StringAutomaton::read(const string& input) {
       if (input[i] == '\'') {
         if ((i < (input.size() - 1)) and (input[(i + 1)] == '\'')) {
           //do nothing, go back to loop.
+          i++;
+          inputRead++;
         } else {
           isBadString = false;
           break;

@@ -15,7 +15,9 @@ Lexer::Lexer() {
                     new MatcherAutomaton("Facts", TokenType::FACTS),
                     new MatcherAutomaton("Rules", TokenType::RULES),
                     new MatcherAutomaton("Queries", TokenType::QUERIES),
-                    new StringAutomaton(TokenType::STRING)};
+                    new IDAutomaton(TokenType::ID),
+                    new StringAutomaton(TokenType::STRING),
+                    new CommentAutomaton(TokenType::COMMENT)};
 
 }
 
@@ -47,6 +49,12 @@ void Lexer::run(string inputString) {
 
       Token* newTok = maxMachine->CreateToken(strVal, lineNum);
       resultTokens.push_back(newTok);
+
+      for (int lnitrtr = 0; lnitrtr < maxRead; lnitrtr++) {
+        if (workingString[lnitrtr] == '\n') {
+          lineNum++;
+        }
+      }
     }
 
     else {

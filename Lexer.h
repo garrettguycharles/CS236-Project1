@@ -1,6 +1,8 @@
 #pragma once
 #include "MatcherAutomaton.h"
+#include "IDAutomaton.h"
 #include "StringAutomaton.h"
+#include "CommentAutomaton.h"
 #include <vector>
 #include <cctype>
 
