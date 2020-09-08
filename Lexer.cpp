@@ -21,7 +21,7 @@ Lexer::Lexer() {
 
 }
 
-virtual Lexer::~Lexer() {
+Lexer::~Lexer() {
 
   for (int i = 0; i < this->machines.size(); i++) {
     delete machines[i];
