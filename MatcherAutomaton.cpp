@@ -5,7 +5,7 @@ MatcherAutomaton::MatcherAutomaton(string strToMatch, TokenType tokenType) : Aut
   this->strToMatch = strToMatch;
 }
 
-MatcherAutomaton::read(const string& input) {
+int MatcherAutomaton::Read(const string& input) {
   newLinesRead = 0;
   bool isMatch = true;
   int inputRead = 0;

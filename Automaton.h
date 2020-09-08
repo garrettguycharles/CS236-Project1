@@ -17,7 +17,7 @@ class Automaton {
       this->type = type;
     };
 
-    virtual int read(const string& input) = 0;
+    virtual int Read(const string& input) = 0;
 
     virtual Token* CreateToken(string input, int lineNumber) {
       return new Token(type, input, lineNumber);

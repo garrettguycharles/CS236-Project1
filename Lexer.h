@@ -15,6 +15,7 @@ class Lexer {
 
   public:
     Lexer();
+    virtual ~Lexer();
     void run(string inputString);
     string toString();
 };

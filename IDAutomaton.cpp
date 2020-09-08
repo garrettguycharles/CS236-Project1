@@ -6,7 +6,7 @@ IDAutomaton::IDAutomaton(TokenType tokenType) : Automaton(tokenType) {
   this->type = TokenType::ID;
 }
 
-IDAutomaton::read(const string& input) {
+int IDAutomaton::Read(const string& input) {
   int inputRead = 0;
   bool isID = false;
 

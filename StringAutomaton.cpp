@@ -5,7 +5,7 @@ StringAutomaton::StringAutomaton(TokenType tokenType) : Automaton(tokenType) {
   this->type = TokenType::STRING;
 }
 
-StringAutomaton::read(const string& input) {
+int StringAutomaton::Read(const string& input) {
   int inputRead = 0;
   bool isString = false;
 

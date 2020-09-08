@@ -21,6 +21,18 @@ Lexer::Lexer() {
 
 }
 
+virtual Lexer::~Lexer() {
+
+  for (int i = 0; i < this->machines.size(); i++) {
+    delete machines[i];
+  }
+
+  for (int i = 0; i < resultTokens.size(); i++) {
+    delete resultTokens[i];
+  }
+
+}
+
 void Lexer::run(string inputString) {
   /*for (int i = 0; i < machines.size(); i++) {
     cout << machines[i]->read(inputString) << endl;
@@ -35,7 +47,7 @@ void Lexer::run(string inputString) {
     int maxMachineNewLinesRead = 0;
 
     for (int i = 0; i < machines.size(); i++) {
-      int inputRead = machines.at(i)->read(workingString);
+      int inputRead = machines.at(i)->Read(workingString);
       if (inputRead > maxRead) {
         maxRead = inputRead;
         maxMachine = machines.at(i);

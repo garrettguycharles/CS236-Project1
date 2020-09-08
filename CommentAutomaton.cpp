@@ -5,7 +5,7 @@ CommentAutomaton::CommentAutomaton(TokenType tokenType) : Automaton(tokenType) {
   this->type = TokenType::COMMENT;
 }
 
-CommentAutomaton::read(const string& input) {
+int CommentAutomaton::Read(const string& input) {
   int inputRead = 0;
   bool isLineComment = false;
   bool isBlockComment = false;

@@ -9,7 +9,7 @@ class MatcherAutomaton : public Automaton {
   public:
     MatcherAutomaton(string strToMatch, TokenType tokenType);
 
-    int read(const string& input);
+    int Read(const string& input);
 
     int getNewLines() {return this->newLinesRead;}
 };
