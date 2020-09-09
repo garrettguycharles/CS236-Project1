@@ -1,6 +1,6 @@
 ,
 'a string'
-# a comment
+# a COMMENT
 Schemes
 FactsRules
 ::-

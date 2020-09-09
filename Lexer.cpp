@@ -100,7 +100,7 @@ string Lexer::toString() {
 
   }
   cout << "Total Tokens = " << resultTokens.size() << endl << endl;
-  strToReturn += "Total Tokens: " + to_string(resultTokens.size());
+  strToReturn += "Total Tokens = " + to_string(resultTokens.size());
 
   return strToReturn;
 

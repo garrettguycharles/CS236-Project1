@@ -30,7 +30,7 @@ int CommentAutomaton::Read(const string& input) {
   } else if (isBlockComment) {
     inputRead++;
     bool isBadComment = true;
-    for (int i = 2; i < (input.size() - 1); i++) {
+    for (int i = 2; i < (input.size()); i++) {
       inputRead++;
       if (input[i] == '|') {
         if ((i < (input.size() - 1)) and !(input[(i + 1)] == '#')) {
