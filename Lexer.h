@@ -1,4 +1,6 @@
-#pragma once
+#ifndef LEXER_H
+#define LEXER_H
+
 #include "MatcherAutomaton.h"
 #include "IDAutomaton.h"
 #include "StringAutomaton.h"
@@ -19,3 +21,5 @@ class Lexer {
     void run(string inputString);
     string toString();
 };
+
+#endif

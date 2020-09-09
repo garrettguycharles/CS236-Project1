@@ -1,5 +1,3 @@
-#pragma once
-
 #include "Token.h"
 
 Token::Token() {

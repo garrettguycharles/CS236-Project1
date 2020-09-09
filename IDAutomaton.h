@@ -1,4 +1,6 @@
-#pragma once
+#ifndef IDAUTOMATON_H
+#define IDAUTOMATON_H
+
 #include "Automaton.h"
 #include <string>
 
@@ -8,3 +10,5 @@ class IDAutomaton : public Automaton {
 
     int Read(const string& input);
 };
+
+#endif

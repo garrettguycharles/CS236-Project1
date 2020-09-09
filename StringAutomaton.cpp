@@ -1,4 +1,3 @@
-#pragma once
 #include "StringAutomaton.h"
 
 StringAutomaton::StringAutomaton(TokenType tokenType) : Automaton(tokenType) {
@@ -16,7 +15,7 @@ int StringAutomaton::Read(const string& input) {
 
   if (isString) {
     bool isBadString = true;
-    for (int i = 1; i < input.size(); i++) {
+    for (unsigned int i = 1; i < input.size(); i++) {
       inputRead++;
       if (input[i] == '\'') {
         if ((i < (input.size() - 1)) and (input[(i + 1)] == '\'')) {

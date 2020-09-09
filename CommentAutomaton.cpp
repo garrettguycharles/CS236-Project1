@@ -1,4 +1,3 @@
-#pragma once
 #include "CommentAutomaton.h"
 
 CommentAutomaton::CommentAutomaton(TokenType tokenType) : Automaton(tokenType) {
@@ -20,7 +19,7 @@ int CommentAutomaton::Read(const string& input) {
   }
 
   if (isLineComment) {
-    for(int i = 1; i < input.size(); i++) {
+    for(unsigned int i = 1; i < input.size(); i++) {
       if (input[i] == '\n') {
         break;
       } else {
@@ -30,7 +29,7 @@ int CommentAutomaton::Read(const string& input) {
   } else if (isBlockComment) {
     inputRead++;
     bool isBadComment = true;
-    for (int i = 2; i < (input.size()); i++) {
+    for (unsigned int i = 2; i < (input.size()); i++) {
       inputRead++;
       if (input[i] == '|') {
         if ((i < (input.size() - 1)) and !(input[(i + 1)] == '#')) {

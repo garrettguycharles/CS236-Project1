@@ -1,4 +1,6 @@
-#pragma once
+#ifndef AUTOMATON_H
+#define  AUTOMATON_H
+
 
 #include <iostream>
 #include <string>
@@ -17,6 +19,8 @@ class Automaton {
       this->type = type;
     };
 
+    virtual ~Automaton() {};
+
     virtual int Read(const string& input) = 0;
 
     virtual Token* CreateToken(string input, int lineNumber) {
@@ -28,3 +32,5 @@ class Automaton {
     }
 
 };
+
+#endif

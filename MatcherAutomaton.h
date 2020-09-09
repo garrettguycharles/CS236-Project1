@@ -1,4 +1,6 @@
-#pragma once
+#ifndef MATCHERAUTOMATON_H
+#define MATCHERAUTOMATON_H
+
 #include "Automaton.h"
 #include <string>
 
@@ -13,3 +15,5 @@ class MatcherAutomaton : public Automaton {
 
     int getNewLines() {return this->newLinesRead;}
 };
+
+#endif

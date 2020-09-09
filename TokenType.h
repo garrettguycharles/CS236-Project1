@@ -1,4 +1,5 @@
-#pragma once
+#ifndef TOKENTYPE_H
+#define TOKENTYPE_H
 
 enum class TokenType {COMMA,
                       PERIOD,
@@ -18,3 +19,5 @@ enum class TokenType {COMMA,
                       COMMENT,
                       UNDEFINED,
                       END_OF_FILE};
+
+#endif

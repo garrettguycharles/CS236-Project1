@@ -23,18 +23,18 @@ Lexer::Lexer() {
 
 Lexer::~Lexer() {
 
-  for (int i = 0; i < this->machines.size(); i++) {
+  for (unsigned int i = 0; i < this->machines.size(); i++) {
     delete machines[i];
   }
 
-  for (int i = 0; i < resultTokens.size(); i++) {
+  for (unsigned int i = 0; i < resultTokens.size(); i++) {
     delete resultTokens[i];
   }
 
 }
 
 void Lexer::run(string inputString) {
-  /*for (int i = 0; i < machines.size(); i++) {
+  /*for (unsigned int i = 0; i < machines.size(); i++) {
     cout << machines[i]->read(inputString) << endl;
   }*/
   string workingString = inputString;
@@ -44,14 +44,14 @@ void Lexer::run(string inputString) {
   while (workingString.size() > 0) {
     int maxRead = 0;
     Automaton* maxMachine = machines.at(0);
-    int maxMachineNewLinesRead = 0;
+    //int maxMachineNewLinesRead = 0;
 
-    for (int i = 0; i < machines.size(); i++) {
+    for (unsigned int i = 0; i < machines.size(); i++) {
       int inputRead = machines.at(i)->Read(workingString);
       if (inputRead > maxRead) {
         maxRead = inputRead;
         maxMachine = machines.at(i);
-        maxMachineNewLinesRead = maxMachine->newLinesRead();
+        //maxMachineNewLinesRead = maxMachine->newLinesRead();
 
       }
     }
@@ -92,14 +92,14 @@ void Lexer::run(string inputString) {
 
 string Lexer::toString() {
   string strToReturn = "";
-  cout << endl;
-  for (int i = 0; i < resultTokens.size(); i++) {
+  //cout << endl;
+  for (unsigned int i = 0; i < resultTokens.size(); i++) {
 
-    cout << resultTokens.at(i)->toString() << endl;
+    //cout << resultTokens.at(i)->toString() << endl;
     strToReturn += resultTokens.at(i)->toString() + "\n";
 
   }
-  cout << "Total Tokens = " << resultTokens.size() << endl << endl;
+  //cout << "Total Tokens = " << resultTokens.size() << endl << endl;
   strToReturn += "Total Tokens = " + to_string(resultTokens.size());
 
   return strToReturn;

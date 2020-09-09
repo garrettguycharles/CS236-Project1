@@ -1,4 +1,3 @@
-#pragma once
 #include "MatcherAutomaton.h"
 
 MatcherAutomaton::MatcherAutomaton(string strToMatch, TokenType tokenType) : Automaton(tokenType) {
@@ -9,7 +8,7 @@ int MatcherAutomaton::Read(const string& input) {
   newLinesRead = 0;
   bool isMatch = true;
   int inputRead = 0;
-  for (int i = 0; i < this->strToMatch.size(); i++) {
+  for (unsigned int i = 0; i < this->strToMatch.size(); i++) {
     if (input[i] != strToMatch[i]) {
       isMatch = false;
     }

@@ -12,38 +12,42 @@ using namespace std;
 
 int main(int argc, char* argv[]) {
   string srcPath;
-  string destPath;
+  //string destPath;
 
   /*
-  for (int i = 0; i < argc; i++) {
-    cout << i << ": " << argv[i] << endl;
-  }
-  */
-
-
-  vector<string> args;
-  for (int i = 0; i < argc; i++) {
-    string toAppend = "";
-    stringstream ss;
-    ss << argv[i];
-    ss >> toAppend;
-    args.push_back(toAppend);
-  }
+     for (int i = 0; i < argc; i++) {
+     cout << i << ": " << argv[i] << endl;
+     }
+   */
 
   /*
-  for (int i = 0; i < args.size(); i++) {
-    cout << i << ": " << args.at(i) << endl;
-  }
-  */
+     vector<string> args;
+     for (int i = 0; i < argc; i++) {
+     string toAppend = "";
+     stringstream ss;
+     ss << argv[i];
+     ss >> toAppend;
+     args.push_back(toAppend);
+     }
+   */
 
-  srcPath = args.at(1);
+  /*
+     for (int i = 0; i < args.size(); i++) {
+     cout << i << ": " << args.at(i) << endl;
+     }
+   */
 
-  for (int i = 0; i < (argc - 1); i++) {
-    //cout << args.at(i) << endl;
-    if ((args.at(i).find("-o") != string::npos) or (args.at(i).find("-O") != string::npos) or (args.at(i).find("-output") != string::npos) or (args.at(i).find("-Output") != string::npos)) {
+  //srcPath = args.at(1);
+  srcPath = argv[1];
+
+  /*
+     for (int i = 0; i < (argc - 1); i++) {
+     //cout << args.at(i) << endl;
+     if ((args.at(i).find("-o") != string::npos) or (args.at(i).find("-O") != string::npos) or (args.at(i).find("-output") != string::npos) or (args.at(i).find("-Output") != string::npos)) {
       destPath = args.at(i + 1);
-    }
-  }
+     }
+     }
+   */
 
   Lexer lex;
 
@@ -55,11 +59,12 @@ int main(int argc, char* argv[]) {
 
   if (!fin.is_open()) {
     cout << "Could not open input path." << endl;
-  }
+  } else {
 
-  while (getline(fin, toAppendString)) {
-    toAppendString += "\n";
-    inputString += toAppendString;
+    while (getline(fin, toAppendString)) {
+      toAppendString += "\n";
+      inputString += toAppendString;
+    }
   }
 
   fin.close();
@@ -67,6 +72,10 @@ int main(int argc, char* argv[]) {
   //cout << inputString << endl;
 
   lex.run(inputString);
+
+  cout << lex.toString();
+
+  /*
 
   ofstream fout;
   fout.open(destPath);
@@ -78,6 +87,8 @@ int main(int argc, char* argv[]) {
   fout.close();
 
   cout << "Saved output to " << destPath << endl;
+
+  */
 
   return 0;
 
